@@ -34,7 +34,8 @@ public class ScrabbleManager {
 	
 	public List<String> getAllValidWords(String[] scrabbleChars) {
 		List<String> validWords = new ArrayList<>();
-		List<String> allWords = Permutation.getAllCombinations(scrabbleChars);
+		Permutation permutationHelper = new HeapPermutation();
+		List<String> allWords = permutationHelper.getAllCombinations(scrabbleChars);
 		logger.debug("Input String size is :" + scrabbleChars.length);
 		logger.debug("All possible words size is : " + allWords.size());		
 		// Add only the valid words in result
