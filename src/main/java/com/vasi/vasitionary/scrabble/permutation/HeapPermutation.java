@@ -1,4 +1,4 @@
-package com.vasi.vasitionary.scrabble;
+package com.vasi.vasitionary.scrabble.permutation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +8,10 @@ import java.util.List;
  * @author vemohanr
  *
  */
-public class HeapPermutation implements Permutation {
+public class HeapPermutation {
 
-	@Override
-	public List<String> getAllCombinations(String[] chars) {
+	
+	public List<String> permute(String[] chars) {
 		List<String> permutations = new ArrayList<String>();
 		heapPermutation(chars, chars.length, chars.length, permutations);
 		return permutations;

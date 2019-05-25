@@ -11,6 +11,8 @@ import org.slf4j.LoggerFactory;
 import com.vasi.vasitionary.parser.ICallback;
 import com.vasi.vasitionary.parser.IDictionaryParser;
 import com.vasi.vasitionary.parser.json.JSONDictionaryParser;
+import com.vasi.vasitionary.scrabble.permutation.AllCombinationV2;
+import com.vasi.vasitionary.scrabble.permutation.HeapPermutation;
 import com.vasi.vasitionary.trie.Trie;
 
 public class ScrabbleManager {
@@ -34,7 +36,7 @@ public class ScrabbleManager {
 	
 	public List<String> getAllValidWords(String[] scrabbleChars) {
 		List<String> validWords = new ArrayList<>();
-		Permutation permutationHelper = new HeapPermutation();
+		AllCombinationV2 permutationHelper = new AllCombinationV2();
 		List<String> allWords = permutationHelper.getAllCombinations(scrabbleChars);
 		logger.debug("Input String size is :" + scrabbleChars.length);
 		logger.debug("All possible words size is : " + allWords.size());		

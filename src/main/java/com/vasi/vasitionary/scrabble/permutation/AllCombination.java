@@ -1,14 +1,14 @@
-package com.vasi.vasitionary.scrabble;
+package com.vasi.vasitionary.scrabble.permutation;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllCombinationPermutation implements Permutation {	
+public class AllCombination {	
 
 	public List<String> getAllCombinations(String[] chars) {
 		List<String> allCombinations = new ArrayList<>();
 		for (int i = chars.length;i > 1 ;i--) {
-			AllCombinationPermutation permutation = new AllCombinationPermutation();
+			AllCombination permutation = new AllCombination();
 			List<String> kCombinations = new ArrayList<>();			
 			permutation.getAllKLength(chars, i, kCombinations);
 			allCombinations.addAll(kCombinations);

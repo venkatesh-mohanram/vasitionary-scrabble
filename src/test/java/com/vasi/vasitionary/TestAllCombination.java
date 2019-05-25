@@ -6,13 +6,11 @@ import java.util.List;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.vasi.vasitionary.scrabble.AllCombinationPermutation;
-import com.vasi.vasitionary.scrabble.HeapPermutation;
-import com.vasi.vasitionary.scrabble.Permutation;
+import com.vasi.vasitionary.scrabble.permutation.AllCombination;
 
 import junit.framework.Assert;
 
-public class TestPermutation {
+public class TestAllCombination {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -22,7 +20,7 @@ public class TestPermutation {
 	public void test() throws UnsupportedEncodingException {		
 		String[] chars = {"றி", "ம", "சு"};
 		//char[] charArray = str.toCharArray();
-		Permutation permutationHelper = new AllCombinationPermutation();
+		AllCombination permutationHelper = new AllCombination();
 		List<String> allCombinations = permutationHelper.getAllCombinations(chars);
 		for (int i=0;i<allCombinations.size();i++) {
 			System.out.println(allCombinations.get(i));
